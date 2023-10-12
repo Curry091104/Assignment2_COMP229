@@ -6,7 +6,7 @@ return `<!doctype html>
 <title>Marketplace</title> 
 </head>
 <body>
-<div id="root">{ message: "Welcome to Marketplace application." }</div> 
+<div id="root">Hello World!</div> 
 </body>
 </html>` 
 }
