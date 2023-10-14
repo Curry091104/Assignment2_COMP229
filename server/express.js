@@ -20,15 +20,9 @@ import cookieParser from 'cookie-parser'
 import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
-import Template from './../template.js'
 import userRoutes from './routes/product.routes.js'
 
 const app = express()
-//...
-app.get('/', (req, res) => {
-res.status(200).send(Template()) 
-})
-//...
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/', userRoutes)

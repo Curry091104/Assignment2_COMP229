@@ -49,7 +49,7 @@ mongoose.connection.on('error', () => {
 throw new Error(`unable to connect to database: ${config.mongoUri}`) 
 })
 app.get("/", (req, res) => {
-res.json({ message: "Welcome to Marketplace application." });
+res.send(JSON.stringify({message: "Welcome to Marketplace application."}));
 });
 app.listen(config.port, (err) => { 
 if (err) {
