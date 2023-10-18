@@ -13,6 +13,5 @@ router.param('id', productCtrl.productByID)
 router.route('/api/products/:id').get(productCtrl.read)
 router.route('/api/products/:id').put(productCtrl.update)
 router.route('/api/products/:id').delete(productCtrl.remove)
-
-
+router.route('/api/products/').delete(productCtrl.removeAll)
 export default router

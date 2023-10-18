@@ -83,6 +83,15 @@ error: errorHandler.getErrorMessage(err)
 })
 } 
 }
-	
+const removeAll = async (req, res) => {
+	try{
+		let deleteProducts = await Product.deleteMany()
+		res.json({message: "All products deleted"})
+	} catch (err){
+	return res.status(400).json({
+		error: errorHandler.getErrorMessage(err)
+	})
+}
+}
 
-export default { create, productByID, read, list, remove, update, searchByName }
+export default { create, productByID, read, list, remove, update, searchByName, removeAll }
